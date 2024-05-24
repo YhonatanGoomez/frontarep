@@ -1,0 +1,14 @@
+.info-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos si es necesario */
+  justify-content: space-around; /* Distribuye el espacio uniformemente */
+}
+
+.info-image {
+  width: 45%; /* Ajusta el porcentaje según tus necesidades */
+  height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+.btn-back {
+  flex-shrink: 0; /* Evita que el botón cambie de tamaño */
+}

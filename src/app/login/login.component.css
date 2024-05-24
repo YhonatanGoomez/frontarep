@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.logo-container {
+    position: relative;
+    top: -200px;
+    margin-bottom: -250px;
+
+}
+.card {
+    margin-top: 350px;
+}
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 6) !important;
+}
+.card-body p:first-child {
+    margin-top: 80px;
+}

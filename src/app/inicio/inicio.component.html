@@ -1,0 +1,91 @@
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 bg-dark text-white p-3 d-flex flex-column justify-content-center align-items-center">
+                <img src="assets\imagenes\Logo2.jfif" class="rounded-circle" alt="Logo de la empresa" width="300" height="300">
+                <button class="btn btn-danger position-fixed top-0 end-0 m-0 p-0 d-flex flex-column align-items-center"
+                    routerLink="/">
+                    <img src="assets\imagenes\cerrarSesion.png" alt="Cerrar sesión" width="40" height="40">
+                    <span>Cerrar sesión</span>
+                </button>
+
+                <h4>Bienvenido de nuevo  {{nombreUsuario}}</h4>
+                <h4>Eres un {{rol}}</h4>
+                <h4 *ngIf="rol === 'usuario'"> Tienes {{puntaje}} puntos </h4>
+            </div>
+            <div class="col-md-9">
+                <h2 class="text-center mt-4">¿Qué quieres hacer hoy?</h2>
+                <div class="row justify-content-center mt-5 d-flex">
+                    <div class="col-md-4 mb-4" *ngIf="rol == 'usuario'">
+                        <div class="card shadow-lg d-flex flex-column h-100">
+                            <img class="card-img-top my-image" src="assets\imagenes\informacion.jpg" alt="Card  cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Información de los Puntos</h5>
+                                <p class="card-text">Aquí obtendrás información de cuantos puntos recibirás por reciclar cada
+                                    material.</p>
+                                <button class="btn btn-primary btn-block mt-auto"
+                                    (click)="redirect('informacion')">Información</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" *ngIf="rol == 'usuario'">
+                        <div class="card shadow-lg d-flex flex-column h-100">
+                            <img class="card-img-top my-image" src="assets\imagenes\publicarOferta.webp" alt="Card cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Publicar una Oferta</h5>
+                                <p class="card-text">Crea una nueva oferta para que los recicladores la vean.</p>
+                                <button class="btn btn-primary btn-block mt-auto" (click)="redirect('crear')">Ir a Crear
+                                    Oferta</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-lg d-flex flex-column h-100">
+                            <img class="card-img-top my-image" src="assets\imagenes\misOfertas.jpg" alt="Card cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Ver mis Ofertas</h5>
+                                <p class="card-text">Revisa y administra tus ofertas publicadas.</p>
+                                <button class="btn btn-secondary btn-block mt-auto" (click)="redirect('my-offers')">Ir a Mis
+                                    Ofertas</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" *ngIf="rol == 'usuario'">
+                        <div class="card shadow-lg d-flex flex-column h-100">
+                            <img class="card-img-top my-image" src="assets\imagenes\Premios.jpg" alt="Card  cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Consulta y Reclama premios</h5>
+                                <p class="card-text">Aquí podrás conocer que premios puedes reclamar con tus puntos actuales</p>
+                                <button class="btn btn-primary btn-block mt-auto" (click)="redirect('premios')">Ir a
+                                    Premios</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" *ngIf="rol == 'usuario'">
+                        <div class="card shadow-lg d-flex flex-column h-100">
+                            <img class="card-img-top my-image" src="assets\imagenes\mispremios.jpg" alt="Card  cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Consulta tus premios</h5>
+                                <p class="card-text">Consulta los premios que has reclamado por reciclar</p>
+                                <button class="btn btn-primary btn-block mt-auto" (click)="redirect('mispremios')">Ir a
+                                    Premios</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" *ngIf="rol == 'reciclador'">
+                        <div class="card shadow-lg d-flex flex-column h-100">
+                            <img class="card-img-top my-image" src="assets\imagenes\verOfertas.jpg" alt="Card cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Ver ofertas disponibles</h5>
+                                <p class="card-text">Explora las ofertas disponibles y encuentra la que más te convenga.</p>
+                                <button class="btn btn-success btn-block mt-auto" (click)="redirect('ofertas')">Ir a Ver
+                                    Ofertas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

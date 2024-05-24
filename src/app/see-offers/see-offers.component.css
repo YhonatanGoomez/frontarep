@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+    border-collapse: collapse; /* Asegura que los bordes de las celdas se unan */
+  }
+  th, td {
+    border: 1px solid black; /* Añade un borde a cada celda */
+    padding: 8px; /* Añade un poco de espacio alrededor del texto en las celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  thead {
+    background-color: #f2f2f2; /* Color de fondo para el encabezado de la tabla */
+  }
+
+  
+              
+
+              
+  .float{
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+.float:hover{
+    box-shadow: 0 8px 8px 0 #e90f0f,0 8px 8px 0 #650303;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
+}
+              
+              

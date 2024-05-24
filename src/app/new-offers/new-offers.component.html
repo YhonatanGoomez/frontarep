@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Recolección</title>
+</head>
+<body>
+    <button class="btn btn-danger position-fixed top-0 end-0 m-0 p-0 d-flex flex-column align-items-center" routerLink="/">
+        <img src="assets/imagenes/cerrarSesion.png" alt="Cerrar sesión"  width="40" height="40">
+        <span>Cerrar sesión</span>
+    </button>
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Formulario de Recolección</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <form action="/submit" method="post">
+                            <!-- <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" class="form-control" readonly>
+                            </div> -->
+                            <div class="form-group">
+                                <label for="direccion">Dirección:</label>
+                                <input type="text" id="direccion" [(ngModel)]="direccion" name="direccion" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="material">Material:</label>
+                                <select id="material" [(ngModel)]="material" name="material" class="form-control">
+                                    <option value="Papel/Cartón">Papel/Cartón</option>
+                                    <option value="Vidrio">Vidrio</option>
+                                    <option value="Metales">Metales</option>
+                                    <option value="Plásticos">Plásticos</option>
+                                    <option value="Electrónicos">Electrónicos</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cantidad">Cantidad (kg):</label>
+                                <input type="number" id="cantidad" [(ngModel)]="cantidad" name="cantidad" class="form-control" min="1" step="1">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" (click)="insertPetition()" class="btn btn-primary mt-3">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

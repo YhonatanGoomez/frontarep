@@ -1,0 +1,27 @@
+
+<div class="container">
+    <button class="btn btn-danger position-fixed top-0 end-0 m-0 p-0 d-flex flex-column align-items-center" routerLink="/">
+        <img src="assets\imagenes\cerrarSesion.png" alt="Cerrar sesión"  width="40" height="40">
+        <span>Cerrar sesión</span>
+    </button>
+    
+      <h1 class="text-center my-4">Premios por reciclar</h1>
+      <h3>Puntos disonibles: {{puntosDisponibles}}</h3>
+      <div *ngIf="premios.length == 0" class="row"><h1>Puntos insuficientes</h1></div>
+      <div *ngIf="premios.length > 0" class="row">
+        <div *ngFor="let oferta of premios; let i = index" class="col-md-4 mb-4">
+            
+            
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Nombre: {{oferta[1].nombre}}</h5>
+              <p class="card-text">Puntaje: {{oferta[1].puntaje}}</p>
+              </div><button class="float" (click)="tomarPremio(oferta[1].nombre)">Tomar premio</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="d-flex justify-content-center my-4">
+        <button class="btn btn-primary" routerLink="/inicio">Volver a inicio</button>
+      </div>

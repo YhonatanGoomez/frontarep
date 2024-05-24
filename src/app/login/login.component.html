@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="login.component.css" />
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="logo-container text-center">
+                        <img src="assets\imagenes\Logo2.jfif" class="rounded-circle" alt="Logo de la empresa" width="300" height="300">
+                    </div>
+                    <div class="card-body">
+                        <p class="text-center ">¡Bienvenido a Eciclaje!</p>
+                        <p class="text-center mb-5">Para comenzar a reciclar debes iniciar sesión.</p>
+                        <form id="queries_form" action="#" method="post">
+                            <div class="form-group d-flex justify-content-center">
+                                <button (click)="login()" class="btn btn-primary">Iniciar sesión</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

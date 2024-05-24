@@ -1,0 +1,26 @@
+<div class="container">
+<button class="btn btn-danger position-fixed top-0 end-0 m-0 p-0 d-flex flex-column align-items-center" routerLink="/">
+    <img src="assets\imagenes\cerrarSesion.png" alt="Cerrar sesión"  width="40" height="40">
+    <span>Cerrar sesión</span>
+</button>
+  <h1 class="text-center my-4">Ver ofertas generales</h1>
+  <div *ngIf="ofertas.length == 0" class="row"><h1>No hay ofertas disponibles en el momento</h1></div>
+  <div *ngIf="ofertas.length > 0" class="row">
+    <div *ngFor="let oferta of ofertas; let i = index" class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">ID: {{ oferta.data[0] }}</h5>
+          <p class="card-text">Nombre: {{ oferta.data[1] }}</p>
+          <p class="card-text">Dirección: {{ oferta.data[3] }}</p>
+          <p class="card-text">Estado: {{ oferta.data[4] }}</p>
+          <p class="card-text">Material: {{ oferta.data[5] }}</p>
+          <p class="card-text">Cantidad: {{ oferta.data[6] }}</p>
+          </div><button class="float" (click)="consultarOferta(oferta.data[0])">Tomar Oferta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center my-4">
+    <button class="btn btn-primary" routerLink="/inicio">Volver a inicio</button>
+  </div>

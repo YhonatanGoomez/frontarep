@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+    border-collapse: collapse; /* Asegura que los bordes de las celdas se unan */
+  }
+  th, td {
+    border: 1px solid black; /* Añade un borde a cada celda */
+    padding: 8px; /* Añade un poco de espacio alrededor del texto en las celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  thead {
+    background-color: #f2f2f2; /* Color de fondo para el encabezado de la tabla */
+  }

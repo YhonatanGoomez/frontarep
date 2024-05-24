@@ -1,0 +1,29 @@
+<h1 class="text-center my-4">Ver mis ofertas</h1>
+<button class="btn btn-danger position-fixed top-0 end-0 m-0 p-0 d-flex flex-column align-items-center" routerLink="/">
+  <img src="assets\imagenes\cerrarSesion.png" alt="Cerrar sesión"  width="40" height="40">
+  <span>Cerrar sesión</span>
+</button>
+<div *ngIf="ofertas.length == 0 && rol == 'reciclador'" class="row"><h1>No has seleccionado ninguna oferta hasta el momento</h1></div>
+<div *ngIf="ofertas.length == 0 && rol == 'usuario'" class="row"><h1>No has creado ninguna oferta hasta el momento</h1></div>
+<div *ngIf="ofertas.length > 0" class="d-flex justify-content-center flex-wrap">
+  <div *ngFor="let oferta of ofertas; let i = index" class="card m-2" style="width: 18rem;">
+    <div class="card-body">
+      <h5 *ngIf="rol == 'usuario'" class="card-title">{{ oferta[1].data[1] }}</h5>
+      <h5 *ngIf="rol == 'reciclador'" class="card-title">{{ oferta[1].data[8] }}</h5>
+      <p class="card-text">
+        <strong>ID:</strong> {{ oferta[1].data[0] }}<br>
+        <strong>Dirección:</strong> {{ oferta[1].data[3] }}<br>
+        <strong>Estado:</strong> {{ oferta[1].data[4] }}<br>
+        <strong>Material:</strong> {{ oferta[1].data[5] }}<br>
+        <strong>Cantidad:</strong> {{ oferta[1].data[6]}} kg
+      </p>
+      <div *ngIf="rol === 'reciclador' && oferta[1].data[4] != 'Recogido'">
+        <button class="btn btn-primary float-right" (click)="endOffer(oferta[1].data[0])">Finalizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center my-4">
+  <button class="btn btn-primary" routerLink="/inicio">Volver a inicio</button>
+</div>
